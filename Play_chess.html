@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pygame в браузере</title>
+    <script type="text/javascript" src="brython.js"></script>
+</head>
+<body onload="brython()">
+    <script type="text/python">
+        from browser import document, window
+        import sys
+
+        # Загружаем модуль pygame
+        sys.path.append('.')
+        import game.py
+
+        game.py.main()
+    </script>
+</body>
+</html>
